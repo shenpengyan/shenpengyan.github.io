@@ -115,7 +115,6 @@ nexus3:
     1. Why maven is downloading metadata every time? 每次用maven编译代码，总是会有一些Download，比如：
     
     ```
-    :call <SNR>114_SparkupNext()
     Downloading:  http://download.java.net/maven/2/org/apache/maven/plugins/maven-metadata.xml
     ```
 
@@ -125,31 +124,20 @@ nexus3:
 :call <SNR>114_SparkupNext()
 <repositories>
     <repository>
-            <id>central</id>
-                    <url>http://gotoNexus</url>
-                            <snapshots>
-                                        <enabled>true</enabled>
-                                                    <updatePolicy>always</updatePolicy>
-                                                            </snapshots>
-                                                                    <releases>
-                                                                                <enabled>true</enabled>
-                                                                                            <updatePolicy>daily</updatePolicy>
-                                                                                                    </releases>
-                                                                                                        </repository>
+        <id>central</id>
+        <url>http://gotoNexus</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+    </repository>
 </repositories>
 ```
-:call <SNR>114_SparkupNext()
 
 里面的updateProlicy告诉maven多久联系远程maven repo，如示例中，snapshots设置为always的时候，每次更新snapshots类型的maven依赖，都会到远程仓库中检查是否有更新。
 
 详细参考答案：<http://stackoverflow.com/questions/16421454/why-maven-is-downloading-metadata-every-time>
-```
-```
-    ```
-    ```]
-    ```
-    ```
-    ```
-    ```
-```
-```
