@@ -1,4 +1,3 @@
-
 ---
 layout:     post
 title:      "乔迁之喜：终于在github page上弄好了一个博客"
