@@ -6,7 +6,7 @@ date:       2017-03-05 03:00:00
 author:     "沈歌"
 header-img: "img/home-bg-o.jpg"
 tags:
-    - 生活感悟
+- 生活感悟
 ---
   
   
