@@ -62,14 +62,14 @@ nexus3:
 
 *报错* 
 
-        ```
+```
     jvm 3    | Error: failed /home/work/local/jre1.8.0_111/lib/amd64/server/libjvm.so, because /lib64/tls/libc.so.6: version `GLIBC_2.4' not found (required by /home/work/local/jre1.8.0_111/lib/amd64/server/libjvm.so)
-        ```
+```
 
 *解决*：没有GLIBC_2.4,系统版本不支持jdk1.7及以上。要么换jdk版本，要么升级系统。详细请参考[invoke jdk1.7 报错 “/lib/tls/libc.so.6: version `GLIBC_2.4' not found”](http://blog.csdn.net/zhouzihan520xj/article/details/44126919)
     
 
-####安装nexus详细步骤
+#### 安装nexus详细步骤
     
 1. 到官网下载压缩包：如``nexus-2.5.1-01-bundle.tar.gz``.
     
@@ -84,7 +84,7 @@ nexus3:
 6. 修改默认端口：地址：``nexus-2.5.1-01/bin``,修改配置``application-port=8081``,修改完重启
     
 
-####配置仓库
+#### 配置仓库
     
 Nexus的仓库分为这么几类：
     
@@ -96,37 +96,38 @@ Nexus的仓库分为这么几类：
     
     group 仓库组：Nexus 通过仓库组的概念统一管理多个仓库，这样我们在项目中直接请求仓库组即可请求到仓库组管理的多个仓库。
     
+
 > 默认的代理仓库使用的是apache的maven库，对于公司内的人来说，很多服务器没有外网访问权限，所以需要换成公司自己的maven仓库。
     
-    ######代理maven仓库
+   
+###### 代理maven仓库
     
-    为了更好的使用 Nexus 的搜索，我们可以设置所有 proxy 仓库的 Download Remote Indexes 为 true，即允许下载远程仓库索引。
+为了更好的使用 Nexus 的搜索，我们可以设置所有 proxy 仓库的 Download Remote Indexes 为 true，即允许下载远程仓库索引。
     
-    而真正的jar包，则在代码中通过maven私服拉取的时候才会下载到本地服务器中。
+而真正的jar包，则在代码中通过maven私服拉取的时候才会下载到本地服务器中。
     
     
     
 关于配置部分，可以参考 *使用Nexus搭建Maven私服<http://www.voidcn.com/blog/zpf336/article/p-5772708.html>*,里面图文并茂，写的很好，虽然只是windows平台的安装过程，但是很有参考价值。
     
-    --------------------------------------------------------
-    ####settting.xml
+--------------------------------------------------------
+#### settting.xml
     
-    关于setting.xml，请参考apache的官方文档，我认为查文档最好查最原生的文档，而不是别人理解之后写出来的博客，<http://maven.apache.org/settings.html>, 中文翻译：<http://www.cnblogs.com/yakov/archive/2011/11/26/maven2_settings.html>
+关于setting.xml，请参考apache的官方文档，我认为查文档最好查最原生的文档，而不是别人理解之后写出来的博客，<http://maven.apache.org/settings.html>, 中文翻译：<http://www.cnblogs.com/yakov/archive/2011/11/26/maven2_settings.html>
     
-    questions：
+questions：
     
-    1. Why maven is downloading metadata every time? 每次用maven编译代码，总是会有一些Download，比如：
+1. Why maven is downloading metadata every time? 每次用maven编译代码，总是会有一些Download，比如：
     
-    ```
+```
     Downloading:  http://download.java.net/maven/2/org/apache/maven/plugins/maven-metadata.xml
-    ```
+```
 
 
 
 **简要答案**：因为setting中的配置
 
 ```
-:call <SNR>114_SparkupNext()
 <repositories>
     <repository>
         <id>central</id>
