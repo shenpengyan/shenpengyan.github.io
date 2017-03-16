@@ -10,7 +10,6 @@ tags:
 - 架构
 ---
 
-> 转自：<http://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959728&idx=1&sn=933227840ec8cdc35d3a33ae3fe97ec5&chksm=bd2d046c8a5a8d7a13551124af36bedf68f7a6e31f6f32828678d2adb108b86b7e08c678f22f&scene=21#wechat_redirect>， 有部分改动
 
 ### 一、什么是高可用
 
@@ -37,10 +36,15 @@ tags:
 常见互联网分布式架构如上分为：
 
 **（1） 客户端层**：典型调用方是浏览器browser或者手机应用APP
+
 **（2） 反向代理层**：系统入口，反向代理。
+
 **（3） 站点应用层**：实现核心应用逻辑，返回html或者json
+
 **（4） 服务层**：如果实现了服务化，就有这一层
+
 **（5） 数据-缓存层**： 缓存加速访问存储
+
 **（6） 数据-数据库层**：数据库固化数据存储
 
 整个系统的高可用，又是通过每一层的冗余+自动故障转移来综合实现的。
@@ -122,11 +126,11 @@ tags:
 
 #### 【服务层> 数据库层“写”】的高可用
 
-![](http://shenpengyan.github.io/img/in-post/what-is-high-availiability/service-to-db-wirte.png)
+![](http://shenpengyan.github.io/img/in-post/what-is-high-availiability/service-to-db-write.png)
 
 【服务层】到【数据库写】的高可用，是通过写库的冗余来实现的。以mysql为例，可以设置两个mysql双主同步，一台对线上提供服务，另一台冗余以保证高可用，常见的实践是keepalived存活探测，相同virtual IP提供服务。
 
-![](http://shenpengyan.github.io/img/in-post/what-is-high-availiability/service-to-db-wirte-down.png)
+![](http://shenpengyan.github.io/img/in-post/what-is-high-availiability/service-to-db-write-down.png)
 
 自动故障转移：当写库挂了的时候，keepalived能够探测到，会自动的进行故障转移，将流量自动迁移到shadow-db-master，由于使用的是相同的virtual IP，这个切换过程对调用方是透明的。
 
@@ -145,6 +149,7 @@ tags:
 5. 【服务层】到【数据库“读”】的高可用，是通过读库的冗余实现的，常见实践是通过db-connection-pool来保证自动故障转移
 6. 【服务层】到【数据库“写”】的高可用，是通过写库的冗余实现的，常见实践是keepalived + virtual IP自动故障转移。
 
+> 转自：<http://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959728&idx=1&sn=933227840ec8cdc35d3a33ae3fe97ec5&chksm=bd2d046c8a5a8d7a13551124af36bedf68f7a6e31f6f32828678d2adb108b86b7e08c678f22f&scene=21#wechat_redirect>， 有部分改动
 
 
 
