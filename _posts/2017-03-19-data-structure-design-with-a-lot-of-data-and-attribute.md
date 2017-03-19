@@ -230,6 +230,7 @@ ext : {”4”:”5”,”5”:3500}
 
 文章写了很长，最后做一个简单总结，面对100亿数据量，1万列属性，10万吞吐量的业务需求，58同城的经验，是采用了元数据服务、属性服务、搜索服务来解决的。
 
+> 转自：58沈剑的《架构师之路》公众号，[100亿数据1万属性数据架构设计](http://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959855&idx=1&sn=f33abe8ec598c273f29cebb9365ece59&chksm=bd2d07f38a5a8ee58a944507a134e1da1efc3ac9c4d1c4cff261137cd986e51f5fe7cee9de15&scene=21#wechat_redirect)
 
 
 
