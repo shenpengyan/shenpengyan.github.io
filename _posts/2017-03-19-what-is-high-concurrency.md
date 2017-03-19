@@ -156,12 +156,7 @@ user1库，存储奇数uid数据
 各层实施水平扩展后，能够通过增加服务器数量的方式来提升系统性能，做到理论上的性能无限。
 
 
-> 转自58沈剑的公众号：**架构师之路**
-
-原文链接：
-```
-http://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959830&idx=1&sn=ce1c5a58caed227d7dfdbc16d6e1cea4&chksm=bd2d07ca8a5a8edc45cc45c4787cc72cf4c8b96fb43d2840c7ccd44978036a7d39a03dd578b5&scene=21#wechat_redirect
-```
+> 转自：58沈剑的《架构师之路》公众号，[究竟啥才是互联网架构“高并发”](http://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959830&idx=1&sn=ce1c5a58caed227d7dfdbc16d6e1cea4&chksm=bd2d07ca8a5a8edc45cc45c4787cc72cf4c8b96fb43d2840c7ccd44978036a7d39a03dd578b5&scene=21#wechat_redirect)
 
 
 
