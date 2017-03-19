@@ -50,7 +50,7 @@ Web-Server通常有个配置，最大工作线程数，后端服务一般也有�
 
 #### IO线程与工作线程通过队列解耦类模型
 
-![](http://shenpengyan.github.io/img/in-post/how-many-thread-number-is-suitable/pic1.jepg)
+![](http://shenpengyan.github.io/img/in-post/how-many-thread-number-is-suitable/pic1.jpeg)
 
 如上图，大部分web-server与服务框架都是使用这样的一种“IO线程与worker线程通过队列解耦”类线程模型：
 
