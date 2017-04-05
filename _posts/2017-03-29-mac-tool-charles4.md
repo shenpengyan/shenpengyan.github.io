@@ -14,6 +14,8 @@ tags:
 
 > Charles是一款运行在你自己计算机上的web代理工具，可以有效地获取http通信信息，主要用于网页的开发和调试等。
 
+[TOC]
+
 ### 安装
 
 以下为来自[史蒂芬周的博客的Charles 4.0 Mac破解版](http://www.sdifenzhou.com/charles4.html)
