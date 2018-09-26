@@ -18,10 +18,10 @@ tags:
 阿里作为中国最大规模使用Java的公司，也是Java技术实力最强的公司。这个手册在业界影响很大，已经成为了很多团队的开发标准，更加方便的是，开发了IntelliJ Idea插件，使用方式见官方说明文档：<https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md> 可以在写代码时实时对常见的代码书写错误或者可能留坑的地方进行提示，非常有用。
 
 如图：插件利用Inspections设置了很多规则进行检验，包含的都是代码规范，如果有错误或者不规范的地方，会标出来，有些还会给出修正建议，非常方便。
-![微信截图_20180926191912](3F9FCCF20AEF4678AF13BDFDA50110DA)
+![](https://shenpengyan.github.io/img/in-post/java-team-coding-rule-1/1.png)
 
 扫描生产环境一个老项目，结果如下，注意这些问题，有助于提高员工能力。
-![微信图片_20180926192415](DEBA9531CA934153998856695C2B8A26)
+![](https://shenpengyan.github.io/img/in-post/java-team-coding-rule-1/2.png)
 
 PS：推荐FindBugs-IDEA，能够帮助我们找出一些代码中的潜在问题，建议配合Alibaba Java Coding Guidelines一起使用。
 
@@ -32,10 +32,10 @@ windows的行结束符是CRLF(\r\n), 而Unix and OS X的是LF(\n)
 因此，最好将行结束符统一设为LF。
 
 设置方式：intellij idea → file → setting → code style → line separator 设为Unix and OS X(\n)
-![image](98CA8F27298645C2B32DA9F3F3FEEF6C)
+![](https://shenpengyan.github.io/img/in-post/java-team-coding-rule-1/3.png)
 
 然后开启本地行结束符提示，当有文件行结束符与设置不一致时，文件上边缘会出现提示，并支持一键修复，如果是老代码进行修改，也有对整个project进行扫描，并一键全部替换，非常方便。
-![image](E33D7DC4AD7A469BA9C00B75E6588A33)
+![](https://shenpengyan.github.io/img/in-post/java-team-coding-rule-1/4.png)
 
 #### 3. code style
 
