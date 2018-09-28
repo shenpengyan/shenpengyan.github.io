@@ -18,7 +18,7 @@ tags:
 
 ##### 狭义上，就是下面这张图
 
-![shujujiegou](https://shenpengyan.github.io/img/in-post/time-complexity/shujujiegou.png)
+![shujujiegou](https://shenpengyan.github.io/img/in-post/time-complexity/shujujiegou.jpg)
 
 ##### 重点：
 
@@ -102,7 +102,7 @@ int find(int[] array, int n, int x) {
 上面的例子：
 假设出现在数组中和不出现在数组中的概率各1/2，则平均时间复杂度的计算过程为：
 
-![](https://shenpengyan.github.io/img/in-post/time-complexity/time1.png)
+![](https://shenpengyan.github.io/img/in-post/time-complexity/time1.jpg)
 
 均摊时间复杂度
 
