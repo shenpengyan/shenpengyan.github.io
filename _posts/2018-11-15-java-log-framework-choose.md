@@ -44,7 +44,7 @@ Log4j 是在 Logback 出现之前被广泛使用的 Log Lib, 由 Gülcü 于2001
 
 这样，在你的项目中，还有第三方的项目中，大家记录日志都使用 JCL 的接口，然后最终运行程序时，可以按照自己的需求(或者喜好)来选择使用合适的Log Implementation。如果用Log4j, 就添加 Log4j 的jar包进去，然后写一个 Log4j 的配置文件；如果喜欢用JUL，就只需要写个 JUL 的配置文件。如果有其他的新的日志库出现，也只需要它提供一个Adapter，运行的时候把这个日志库的 jar 包加进去。
 
-![image](https://pic3.zhimg.com/80/v2-8751f0a05a1663b078b84c5884c486d6_hd.jpg)
+![image](https://shenpengyan.github.io/img/in-post/java-log-framework-choose/1.jpg)
 
 到这个时候一切看起来都很简单，很美好。接口和实现做了良好的分离，在统一的JCL之下，不改变任何代码，就可以通过配置就换用功能更强大，或者性能更好的日志库实现。
 
@@ -88,7 +88,7 @@ logger.debug("start process request, url:{}", url);
 
 现在事情变复杂了。我们有了两个流行的 Log Facade，以及三个流行的 Log Implementation。Gülcü 是个追求完美的人，他决定让这些Log之间都能够方便的互相替换，所以做了各种 Adapter 和 Bridge 来连接:
 
-![image](https://pic2.zhimg.com/80/v2-4a3df07374fe31dbd6fbff88021630ed_hd.jpg)
+![image](https://shenpengyan.github.io/img/in-post/java-log-framework-choose/2.jpg)
 
 可以看到甚至 Log4j 和 JUL 都可以桥接到SLF4J，再通过 SLF4J 适配到到 Logback!
 
@@ -112,7 +112,7 @@ Log4j2 也做了 Facade/Implementation 分离的设计，分成了 log4j-api 和
 
 现在好了，我们有了三个流行的Log 接口和四个流行的Log实现，如果画出桥接关系的图来回事什么样子呢?
 
-![image](https://pic2.zhimg.com/80/v2-57092397ff9d7a69d359856ef19e769d_hd.jpg)
+![image](https://shenpengyan.github.io/img/in-post/java-log-framework-choose/3.jpg)
 
 （图中为了说明方便，log4j2-core实际包为log4j-core, log4j2-api实际包为log4j-api）
 
