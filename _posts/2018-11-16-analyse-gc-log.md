@@ -30,7 +30,7 @@ tags:
 
 
 看图：
-![image](https://shenpengyan.github.io/img/in-post/janalyse-gc-log/1.png)
+![image](https://shenpengyan.github.io/img/in-post/analyse-gc-log/1.png)
 
 全占了,GC时间占了5.83%, 太高了。
 
