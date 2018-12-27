@@ -23,6 +23,7 @@ tags:
 
 ![二维码原理图](https://shenpengyan.github.io/img/in-post/java-qrcode-login-flow/qrcode.png)
 
+
 如图所示：
 
 **1. 请求二维码**
