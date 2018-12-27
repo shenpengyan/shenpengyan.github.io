@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "译:Java局部变量类型推断（Var类型）的26条细则"
-subtitle:   "static-class-variable-cause-concurrent-problem"
-date:       2018-12-20 12:00:00
+subtitle:   "var work in progress"
+date:       2018-12-27 12:00:00
 author:     "沈歌"
 header-img: "img/home-bg-o.jpg"
 tags:
