@@ -94,7 +94,7 @@ APJ/1.3 | apj请求占用的端口
 
 #### tomcat内两种添加Web Modules的方式
 
-1. 添加web project
+1.添加web project
 - view->servers->找到需要修改的tomcat->右击-> add and remove
 
 - tomcat配置信息页，切换Modules tab。
@@ -103,6 +103,6 @@ APJ/1.3 | apj请求占用的端口
     
     如图，按钮`Add Web Module`用来添加内部project。
 
-2. 添加外部web project
+2.添加外部web project
 
     如上图，按钮`Add External Web Module`用来添加外部project。使用这种方式，可以直接把maven web项目中的target目录下的产出放进去启动。
