@@ -74,6 +74,9 @@ B树的定义
 插入示例：
 ![](https://shenpengyan.github.io/img/in-post/2019-05-08-mysql-index/mysqlindex3.png)
 
+动态效果参考：
+[https://www.cs.usfca.edu/~galles/visualization/BTree.html](https://www.cs.usfca.edu/~galles/visualization/BTree.html)
+
 #### B+树
 
 B-Tree有许多变种，其中最常见的是B+Tree，例如MySQL就普遍使用B+Tree实现其索引结构。
@@ -546,7 +549,7 @@ ALTER TABLE employees.employees
 ADD INDEX `first_name_last_name4` (first_name, last_name(4));
 ```
 
-此时再执行一遍按名字查询，比较分析一下与建索引前的结果：
+此时再执行一遍按名字查询，比较分析一下与建索引前的结果(开启profiles: `set profiles = true;`)：
 
 ```
 SHOW PROFILES;
@@ -604,7 +607,9 @@ CREATE TABLE test(
 ```
 MySQL的唯一限制和主键限制都是通过索引实现的，只需要创建一个即可。
 
-冗余索引：如果创建了索引<A, B>，再创建索引<A>就是冗余索引，因为这只是前一个索引的前缀索引。因此索引<A,B>也可以当成索引<A>来使用，如果再创建索引<B, A>，则不是冗余索引。大多数情况下不需要冗余索引，但是有时候为了性能可能也会创建冗余索引。
+冗余索引：如果创建了索引<A, B>，再创建索引A就是冗余索引，因为这只是前一个索引的前缀索引。
+因此索引<A,B>也可以当成索引A来使用，如果再创建索引<B, A>，则不是冗余索引。
+大多数情况下不需要冗余索引，但是有时候为了性能可能也会创建冗余索引。
 
 
 ## 总结
