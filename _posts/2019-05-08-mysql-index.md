@@ -615,4 +615,5 @@ MySQL的唯一限制和主键限制都是通过索引实现的，只需要创建
 1. http://blog.codinglabs.org/articles/theory-of-mysql-index.html (大部分都是拷贝自这篇文章，感谢张洋的辛苦整理) 
 2. https://zh.wikipedia.org/wiki/B树
 3. http://www.cnblogs.com/itdragon/p/8146439.html
+4. Baron Scbwartz等 著，王小东等 译；高性能MySQL（High Performance MySQL）；电子工业出版社，2010
 
