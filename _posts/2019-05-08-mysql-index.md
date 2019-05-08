@@ -604,7 +604,7 @@ CREATE TABLE test(
 ```
 MySQL的唯一限制和主键限制都是通过索引实现的，只需要创建一个即可。
 
-冗余索引：如果创建了索引<A, B>，再创建索引<A> 就是冗余索引，因为这只是前一个索引的前缀索引。因此索引<A,B> 也可以当成索引<A> 来使用，如果再创建索引<B, A>，则不是冗余索引。大多数情况下不需要冗余索引，但是有时候为了性能可能也会创建冗余索引。
+冗余索引：如果创建了索引<A, B>，再创建索引<A>就是冗余索引，因为这只是前一个索引的前缀索引。因此索引<A,B>也可以当成索引<A>来使用，如果再创建索引<B, A>，则不是冗余索引。大多数情况下不需要冗余索引，但是有时候为了性能可能也会创建冗余索引。
 
 
 ## 总结
@@ -613,8 +613,8 @@ MySQL的唯一限制和主键限制都是通过索引实现的，只需要创建
 
 参考文献：
 
-1. http://blog.codinglabs.org/articles/theory-of-mysql-index.html (大部分都是拷贝自这篇文章，感谢张洋的辛苦整理) 
-2. https://zh.wikipedia.org/wiki/B树
-3. http://www.cnblogs.com/itdragon/p/8146439.html
+1. [http://blog.codinglabs.org/articles/theory-of-mysql-index.html](http://blog.codinglabs.org/articles/theory-of-mysql-index.html) (大部分都是拷贝自这篇文章，感谢张洋的辛苦整理) 
+2. [https://zh.wikipedia.org/wiki/B树](https://zh.wikipedia.org/wiki/B树)
+3. [http://www.cnblogs.com/itdragon/p/8146439.html](http://www.cnblogs.com/itdragon/p/8146439.html)
 4. Baron Scbwartz等 著，王小东等 译；高性能MySQL（High Performance MySQL）；电子工业出版社，2010
 
