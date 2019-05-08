@@ -47,7 +47,7 @@ MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取�
 
 #### B-Tree
 
-B树的定义
+B树的定义([维基百科](https://zh.wikipedia.org/wiki/B树))
 
 根据 Knuth 的定义，一个 m 阶的B树是一个有以下属性的树：
 
