@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "当期是否适合买房"
+title:      "当前是否适合买房"
 subtitle:   "Is it suitable to buy house in china"
 date:       2019-11-09 12:00:00
 author:     "沈歌"
